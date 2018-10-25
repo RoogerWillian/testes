@@ -18,7 +18,8 @@ class CreateTableVendas extends Migration
             $table->decimal("valor");
             $table->dateTime('data');
             $table->decimal("comissao");
-            $table->integer("vendedor_id")->references('id')->on('vendedores');
+            $table->integer("vendedor_id")->unsigned();
+            $table->foreign("vendedor_id")->references('id')->on('vendedores');
             $table->timestamps();
         });
     }
