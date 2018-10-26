@@ -75,6 +75,9 @@
       <path value="$PROJECT_DIR$/api/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/api/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/api/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

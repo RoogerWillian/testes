@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Vendedor Controller
+Route::resource("vendedores", 'VendedorController')->only(['index', 'edit', 'update', 'destroy', 'store']);
+
+// Venda Controller
+Route::prefix("vendas")->group(function () {
+    Route::post("lancar", "VendaController@lancar")->name("vendas.lancar");
 });
