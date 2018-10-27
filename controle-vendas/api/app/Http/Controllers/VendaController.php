@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Venda;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Validator;
@@ -58,6 +57,12 @@ class VendaController extends Controller
         } catch (\Exception $exception) {
             return response()->json(["message" => $exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public function por_vendedor($id)
+    {
+        $vendas = Venda::por_vendedor($id);
+        return response()->json(["vendas" => $vendas], Response::HTTP_CREATED);
     }
 
     private function formatar_moeda($valor)
