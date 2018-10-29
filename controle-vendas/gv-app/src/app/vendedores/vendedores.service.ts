@@ -10,8 +10,7 @@ export class VendedoresService {
   constructor(private http: HttpClient) {
   }
 
-  buscar(): Observable<Vendedor[]> {
-    console.log(`${GV_API}/vendedores`);
-    return this.http.get<Vendedor[]>(`${GV_API}/vendedores`);
+  buscar(filtro: string): Observable<Vendedor[]> {
+    return this.http.get<Vendedor[]>(`${GV_API}/vendedores?filtro=${filtro}`);
   }
 }

@@ -22,10 +22,12 @@
 
         <div class="box-tools">
 
-          <div class="input-group input-group" style="width: 400px;margin-top: 5px">
+          <div class="input-group input-group" style="width: 500px;margin-top: 5px">
             <div class="input-group">
               <span class="input-group-addon">Vendedor</span>
-              <select id="vendedor_filtro" class="form-control">
+              <select id="vendedor_filtro" #filtro class="form-control"
+                      (change)="onVendedorSelecionado($event.target.value)">
+                <option value="">Todos os vendedores</option>
                 <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor.id }}">{{ vendedor.nome }}
                 </option>
               </select>

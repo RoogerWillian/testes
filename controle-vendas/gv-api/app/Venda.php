@@ -33,9 +33,17 @@ class Venda extends Model
 
     public static function por_vendedor($vendedor_id)
     {
-        return DB::table("vendas")
-            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
-            ->where("vendedor_id", $vendedor_id)
-            ->get(self::$colunas_retorno);
+        if ($vendedor_id) {
+            $vendas = DB::table("vendas")
+                ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+                ->where("vendedor_id", $vendedor_id)
+                ->get(self::$colunas_retorno);
+        } else {
+            $vendas = DB::table("vendas")
+                ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+                ->get(self::$colunas_retorno);
+        }
+
+        return $vendas;
     }
 }

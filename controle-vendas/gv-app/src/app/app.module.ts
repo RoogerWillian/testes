@@ -10,6 +10,7 @@ import {VendasComponent} from './vendas/vendas.component';
 import {VendedoresComponent} from './vendedores/vendedores.component';
 import {VendedoresService} from './vendedores/vendedores.service';
 import {VendasService} from './vendas/vendas.service';
+import { NovoVendedorComponent } from './vendedores/novo-vendedor/novo-vendedor.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {VendasService} from './vendas/vendas.service';
     HeaderComponent,
     HomeComponent,
     VendasComponent,
-    VendedoresComponent
+    VendedoresComponent,
+    NovoVendedorComponent
   ],
   imports: [
     BrowserModule,

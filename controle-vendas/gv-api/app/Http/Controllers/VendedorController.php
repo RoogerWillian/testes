@@ -25,9 +25,10 @@ class VendedorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $vendedores = Vendedor::all(["id", "nome", "email", "comissao"]);
+        $filtro = $request->get("filtro");
+        $vendedores = Vendedor::buscar($filtro);
 
         return response()->json($vendedores, Response::HTTP_OK);
     }

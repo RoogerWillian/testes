@@ -18,8 +18,11 @@ export class VendasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vendas = this.vendasService.porVendendor('1');
-    this.vendedores = this.vendedoresService.buscar();
+    this.vendas = this.vendasService.porVendendor('');
+    this.vendedores = this.vendedoresService.buscar('');
   }
 
+  onVendedorSelecionado(id: string) {
+    this.vendas = this.vendasService.porVendendor(id);
+  }
 }

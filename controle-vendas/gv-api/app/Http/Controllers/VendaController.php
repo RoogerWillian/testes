@@ -59,9 +59,10 @@ class VendaController extends Controller
         }
     }
 
-    public function por_vendedor($id)
+    public function por_vendedor($id = "")
     {
         $vendas = Venda::por_vendedor($id);
+
         return response()->json($vendas, Response::HTTP_CREATED);
     }
 
