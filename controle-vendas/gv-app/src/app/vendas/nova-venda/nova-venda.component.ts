@@ -33,8 +33,9 @@ export class NovaVendaComponent implements OnInit {
     this.vendedores = this.vendedorService.buscar('');
     this.vendaForm = this.formBuilder.group({
       valor: this.formBuilder.control('', [
-        Validators.required, Validators.pattern(this.numberPattern
-        )]),
+        Validators.required, Validators.pattern(this.numberPattern),
+        Validators.maxLength(10)
+      ]),
       vendedor_id: this.formBuilder.control('', [Validators.required])
     });
   }

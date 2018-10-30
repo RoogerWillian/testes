@@ -13,7 +13,7 @@ class VendaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'vendedor_id' => 'required|integer',
-            'valor' => 'required|numeric|not_in:0|min:0.01|regex:/^\d*(\.\d{2})?$/'
+            'valor' => 'required|not_in:0|min:0.01'
         ]);
 
         return $validator;
@@ -34,6 +34,11 @@ class VendaController extends Controller
 
         try {
             if ($data_to_save) {
+                $valor_venda = $data_to_save['valor'];
+                $valor_venda = str_replace('.', '', $valor_venda);
+                $valor_venda = str_replace(',', '.', $valor_venda);
+                $data_to_save['valor'] = (float)$valor_venda;
+
                 $venda = Venda::create($data_to_save);
                 if ($venda) {
                     $venda_retorno = new \stdClass();

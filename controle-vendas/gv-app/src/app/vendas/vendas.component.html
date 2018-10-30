@@ -25,12 +25,9 @@
           <div class="input-group input-group" style="width: 500px;margin-top: 5px">
             <div class="input-group">
               <span class="input-group-addon">Vendedor</span>
-              <select id="vendedor_filtro" #filtro class="form-control"
-                      (change)="onVendedorSelecionado($event.target.value)">
+              <select id="vendedor_filtro" #filtro class="form-control vendedor_filtro">
                 <option value="">Todos os vendedores</option>
-                <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor.id }}"
-                        [selected]="vendedor.id == getIdVendedorRoute()">
-                  {{vendedor.nome}}
+                <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor?.id }}">{{ vendedor?.nome }}
                 </option>
               </select>
             </div>

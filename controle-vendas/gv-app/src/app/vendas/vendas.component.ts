@@ -6,6 +6,8 @@ import {VendedoresService} from '../vendedores/vendedores.service';
 import {Vendedor} from '../vendedores/vendedor.model';
 import {ActivatedRoute, Router} from '@angular/router';
 
+declare var $: any;
+
 @Component({
   selector: 'gv-vendas',
   templateUrl: './vendas.component.html'
@@ -26,6 +28,9 @@ export class VendasComponent implements OnInit {
         this.vendasService.atualizarStatusBusca(false);
       });
     this.vendedores = this.vendedoresService.buscar('');
+
+    this.inicializarSelect2();
+    this.startEventoChangeFiltro();
   }
 
   onVendedorSelecionado(id: string) {
@@ -42,4 +47,20 @@ export class VendasComponent implements OnInit {
   isBuscandoVendas(): boolean {
     return this.vendasService.isBuscando();
   }
+
+  startEventoChangeFiltro() {
+    $('#vendedor_filtro').on('change', e => {
+      let current_value = $(e.currentTarget).val();
+      this.onVendedorSelecionado(current_value);
+    });
+  }
+
+  inicializarSelect2() {
+    $('.vendedor_filtro').select2({
+      theme: 'bootstrap'
+    });
+
+    $('.select2-selection__rendered').css({top: '4px', position: 'relative'});
+  }
+
 }
