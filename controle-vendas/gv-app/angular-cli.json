@@ -33,7 +33,7 @@
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
         "../node_modules/admin-lte/dist/js/app.min.js",
-        "assets/bootstrap-select.min.js"
+        "../node_modules/jquery-mask-plugin/dist/jquery.mask.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

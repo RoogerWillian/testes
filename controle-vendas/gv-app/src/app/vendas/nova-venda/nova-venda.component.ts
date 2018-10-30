@@ -26,8 +26,9 @@ export class NovaVendaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vendedores = this.vendedorService.buscar('');
+    $('#valor').mask('#.##0,00', {reverse: true});
 
+    this.vendedores = this.vendedorService.buscar('');
     this.vendaForm = this.formBuilder.group({
       valor: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
       vendedor_id: this.formBuilder.control('', [Validators.required])
