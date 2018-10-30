@@ -6,6 +6,8 @@ import {VendedoresService} from '../../vendedores/vendedores.service';
 import {Vendedor} from '../../vendedores/vendedor.model';
 import {Observable} from 'rxjs';
 import {Venda} from '../venda.model';
+import {UdpCurrencyMaskPipe} from '../../pipe/currency.pipe';
+import {CurrencyPipe} from '@angular/common';
 
 declare var $: any;
 
@@ -16,7 +18,7 @@ declare var $: any;
 export class NovaVendaComponent implements OnInit {
 
   vendaForm: FormGroup;
-  numberPattern = /^[0-9]*$/;
+  numberPattern = /\d{1,3}(?:\.\d{2,3})*?,\d/;
   dataAtual = new Date();
   vendedores: Observable<Vendedor[]>;
 
@@ -30,12 +32,16 @@ export class NovaVendaComponent implements OnInit {
 
     this.vendedores = this.vendedorService.buscar('');
     this.vendaForm = this.formBuilder.group({
-      valor: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
+      valor: this.formBuilder.control('', [
+        Validators.required, Validators.pattern(this.numberPattern
+        )]),
       vendedor_id: this.formBuilder.control('', [Validators.required])
     });
   }
 
   lancarVenda(venda: Venda) {
+    venda.valor = $('#valor').unmask().mask('#.##0,00', {reverse: true}).val();
+
     $('#botaoLancarVenda').button('loading');
     this.vendasService.lancarVenda(venda).subscribe(() => {
       this.router.navigate(['/vendas']);

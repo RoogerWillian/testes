@@ -13,7 +13,9 @@ import {VendasService} from './vendas/vendas.service';
 import {NovoVendedorComponent} from './vendedores/novo-vendedor/novo-vendedor.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {InputComponent} from './shared/input/input.component';
-import { NovaVendaComponent } from './vendas/nova-venda/nova-venda.component';
+import {NovaVendaComponent} from './vendas/nova-venda/nova-venda.component';
+import {UdpCurrencyMaskPipe} from './pipe/currency.pipe';
+import {CurrencyPipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { NovaVendaComponent } from './vendas/nova-venda/nova-venda.component';
     VendedoresComponent,
     NovoVendedorComponent,
     InputComponent,
-    NovaVendaComponent
+    NovaVendaComponent,
+    UdpCurrencyMaskPipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { NovaVendaComponent } from './vendas/nova-venda/nova-venda.component';
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [VendedoresService, VendasService],
+  providers: [VendedoresService, VendasService, CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -20,19 +20,17 @@
     </div>
 
     <div class="row invoice-info">
-      <div class="col-xs-12">
-        <p class="lead">Seus dados:</p>
-      </div>
-
       <div class="col-sm-6 col-xs-12">
         <gv-input-container errorMessage="Campo obrigatório" label="Nome">
-          <input class="form-control" formControlName="nome" placeholder="Nome" autocomplete="off">
+          <label for="nome" class="control-label">Seu nome</label>
+          <input id="nome" class="form-control" formControlName="nome" placeholder="Nome" autocomplete="off">
         </gv-input-container>
       </div>
 
       <div class="col-sm-6 col-xs-12">
         <gv-input-container errorMessage="E-mail inválido" label="Nome">
-          <input class="form-control" formControlName="email" placeholder="Nome" autocomplete="off">
+          <label for="email" class="control-label">Seu e-mail</label>
+          <input class="form-control" id="email" formControlName="email" placeholder="E-mail" autocomplete="off">
         </gv-input-container>
       </div>
     </div>
