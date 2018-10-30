@@ -10,7 +10,10 @@ import {VendasComponent} from './vendas/vendas.component';
 import {VendedoresComponent} from './vendedores/vendedores.component';
 import {VendedoresService} from './vendedores/vendedores.service';
 import {VendasService} from './vendas/vendas.service';
-import { NovoVendedorComponent } from './vendedores/novo-vendedor/novo-vendedor.component';
+import {NovoVendedorComponent} from './vendedores/novo-vendedor/novo-vendedor.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {InputComponent} from './shared/input/input.component';
+import { NovaVendaComponent } from './vendas/nova-venda/nova-venda.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,15 @@ import { NovoVendedorComponent } from './vendedores/novo-vendedor/novo-vendedor.
     HomeComponent,
     VendasComponent,
     VendedoresComponent,
-    NovoVendedorComponent
+    NovoVendedorComponent,
+    InputComponent,
+    NovaVendaComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [VendedoresService, VendasService],

@@ -1,3 +1,52 @@
-<p>
-  novo-vendedor works!
-</p>
+<!--<section class="content">-->
+<section class="invoice">
+
+  <form [formGroup]="vendedorForm" novalidate>
+    <div class="row">
+
+      <div class="col-xs-12">
+        <ol class="breadcrumb">
+          <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+          <li><a [routerLink]="['/vendedores']"><i class="fa fa-user-circle"></i> Vendedores</a></li>
+          <li class="active">Novo</li>
+        </ol>
+      </div>
+
+      <div class="col-xs-12">
+        <h2 class="page-header">
+          <i class="fa fa-plus-circle"></i> <span>Cadastro de vendendor</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row invoice-info">
+      <div class="col-xs-12">
+        <p class="lead">Seus dados:</p>
+      </div>
+
+      <div class="col-sm-6 col-xs-12">
+        <gv-input-container errorMessage="Campo obrigatório" label="Nome">
+          <input class="form-control" formControlName="nome" placeholder="Nome" autocomplete="off">
+        </gv-input-container>
+      </div>
+
+      <div class="col-sm-6 col-xs-12">
+        <gv-input-container errorMessage="E-mail inválido" label="Nome">
+          <input class="form-control" formControlName="email" placeholder="Nome" autocomplete="off">
+        </gv-input-container>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button [disabled]="vendedorForm.invalid" (click)="salvarVendedor(vendedorForm.value)"
+              class="btn btn-success pull-right">
+        <i class="fa fa-check-circle"></i>
+        <span>Salvar</span>
+      </button>
+    </div>
+  </div>
+
+</section>

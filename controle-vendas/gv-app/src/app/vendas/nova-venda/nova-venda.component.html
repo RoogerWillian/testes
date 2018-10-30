@@ -1,0 +1,66 @@
+<!--<section class="content">-->
+<section class="invoice">
+
+  <form [formGroup]="vendaForm" novalidate>
+    <div class="row">
+
+      <div class="col-xs-12">
+        <ol class="breadcrumb">
+          <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+          <li><a [routerLink]="['/vendas']"><i class="fa fa-user-circle"></i> Vendas</a></li>
+          <li class="active">Nova</li>
+        </ol>
+      </div>
+
+      <div class="col-xs-12">
+        <h2 class="page-header">
+          <i class="fa fa-plus-circle"></i> <span>Lançando uma nova venda</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row invoice-info">
+      <div class="col-sm-3 col-xs-12">
+        <label for="data">Data</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+          <input id="data" type="text" class="form-control" disabled style="background: white"
+                 value="{{dataAtual | date: 'dd/MM/yyyy'}}">
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-xs-12">
+        <gv-input-container errorMessage="Obrigatório e monetário" label="Valor">
+          <label for="valor">Valor</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+            <input id="valor" class="form-control" formControlName="valor" placeholder="Valor" autocomplete="off">
+          </div>
+        </gv-input-container>
+      </div>
+
+      <div class="col-sm-5 col-xs-12">
+        <gv-input-container errorMessage="Campo obrigatório" label="Vendedor">
+          <label for="vendedor_id" class="control-label">Vendedor</label>
+          <select id="vendedor_id" formControlName="vendedor_id" class="form-control">
+            <option value="">Selecione um vendedor</option>
+            <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor.id }}">{{ vendedor.nome }}
+          </select>
+        </gv-input-container>
+      </div>
+
+    </div>
+
+  </form>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button [disabled]="vendaForm.invalid" (click)="lancarVenda(vendaForm.value)"
+              class="btn btn-success pull-right">
+        <i class="fa fa-check-circle"></i>
+        <span>Salvar</span>
+      </button>
+    </div>
+  </div>
+
+</section>

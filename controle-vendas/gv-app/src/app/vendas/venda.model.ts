@@ -6,4 +6,5 @@ export interface Venda {
   comissao_venda: number
   valor: number
   data: string
+  vendedor_id: string
 }

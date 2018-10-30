@@ -13,4 +13,8 @@ export class VendasService {
   porVendendor(idVendedor: string): Observable<Venda[]> {
     return this.http.get<Venda[]>(`${GV_API}/vendas/por_vendedor/${idVendedor}`)
   }
+
+  lancarVenda(venda: Venda) {
+    return this.http.post<Venda>(`${GV_API}/vendas/lancar`, venda);
+  }
 }

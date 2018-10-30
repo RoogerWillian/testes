@@ -13,7 +13,7 @@ class VendaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'vendedor_id' => 'required|integer',
-            'valor' => 'required|numeric|min:0.01|regex:/^-?[0-9]+(?:\.[0-9]{1,2})?$/'
+            'valor' => 'required|numeric|not_in:0|min:0.01|regex:/^\d*(\.\d{2})?$/'
         ]);
 
         return $validator;

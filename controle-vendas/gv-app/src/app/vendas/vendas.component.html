@@ -14,7 +14,7 @@
     <div class="box">
       <div class="box-header">
         <div class="box-title">
-          <a class="btn btn-default">
+          <a [routerLink]="['/vendas/lancar']" class="btn btn-default">
             <i class="fa fa-plus-circle"></i>
             <span>Lançar venda</span>
           </a>
@@ -28,7 +28,9 @@
               <select id="vendedor_filtro" #filtro class="form-control"
                       (change)="onVendedorSelecionado($event.target.value)">
                 <option value="">Todos os vendedores</option>
-                <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor.id }}">{{ vendedor.nome }}
+                <option *ngFor="let vendedor of vendedores | async" value="{{ vendedor.id }}"
+                        [selected]="vendedor.id == getIdVendedorRoute()">
+                  {{vendedor.nome}}
                 </option>
               </select>
             </div>
