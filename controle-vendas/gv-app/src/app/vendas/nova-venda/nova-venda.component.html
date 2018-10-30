@@ -55,8 +55,9 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <button [disabled]="vendaForm.invalid" (click)="lancarVenda(vendaForm.value)"
-              class="btn btn-success pull-right">
+      <button id="botaoLancarVenda" [disabled]="vendaForm.invalid" (click)="lancarVenda(vendaForm.value)"
+              class="btn btn-success pull-right"
+              data-loading-text="<i class='fa fa-spinner fa-spin '></i> Lançando venda...">
         <i class="fa fa-check-circle"></i>
         <span>Salvar</span>
       </button>

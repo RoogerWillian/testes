@@ -7,6 +7,8 @@ import {Vendedor} from '../../vendedores/vendedor.model';
 import {Observable} from 'rxjs';
 import {Venda} from '../venda.model';
 
+declare var $: any;
+
 @Component({
   selector: 'gv-nova-venda',
   templateUrl: './nova-venda.component.html'
@@ -33,8 +35,10 @@ export class NovaVendaComponent implements OnInit {
   }
 
   lancarVenda(venda: Venda) {
+    $('#botaoLancarVenda').button('loading');
     this.vendasService.lancarVenda(venda).subscribe(() => {
       this.router.navigate(['/vendas']);
+      $('#botaoLancarVenda').button('reset');
     });
   }
 }

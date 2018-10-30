@@ -1,21 +1,26 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {Vendedor} from '../vendedor.model';
 import {VendedoresService} from '../vendedores.service';
+import {DOCUMENT} from '@angular/common';
+
+declare var $: any;
 
 @Component({
   selector: 'gv-novo-vendedor',
   templateUrl: './novo-vendedor.component.html'
 })
-export class NovoVendedorComponent implements OnInit {
+export class NovoVendedorComponent implements OnInit, AfterViewInit {
 
   vendedorForm: FormGroup;
+  botaoSalvar: any;
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-  @ViewChild('botaoSalvar', {read: ElementRef}) botaoSalvar: ElementRef;
 
   constructor(private router: Router, private formBuilder: FormBuilder,
-              private vendedorService: VendedoresService) {
+              private vendedorService: VendedoresService,
+              @Inject(DOCUMENT) document) {
+    this.botaoSalvar = document.getElementById('botaoSalvarVendedor');
   }
 
   ngOnInit() {
@@ -26,8 +31,13 @@ export class NovoVendedorComponent implements OnInit {
   }
 
   salvarVendedor(vendedor: Vendedor) {
+    $('#botaoSalvarVendedor').button('loading');
     this.vendedorService.salvar(vendedor).subscribe(() => {
+      $('#botaoSalvarVendedor').button('reset');
       this.router.navigate(['/vendedores']);
     });
+  }
+
+  ngAfterViewInit(): void {
   }
 }

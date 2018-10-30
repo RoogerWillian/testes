@@ -12,7 +12,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class VendasComponent implements OnInit {
 
-  vendas: Observable<Venda[]>;
+  vendas: Venda[];
   vendedores: Observable<Vendedor[]>;
 
   constructor(private vendasService: VendasService, private vendedoresService: VendedoresService,
@@ -20,12 +20,13 @@ export class VendasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vendas = this.vendasService.porVendendor(this.getIdVendedorRoute() !== undefined ? this.getIdVendedorRoute() : '');
+    this.vendasService.porVendendor(this.getIdVendedorRoute() !== undefined ? this.getIdVendedorRoute() : '')
+      .subscribe(vendas => this.vendas = vendas);
     this.vendedores = this.vendedoresService.buscar('');
   }
 
   onVendedorSelecionado(id: string) {
-    this.vendas = this.vendasService.porVendendor(id);
+    this.vendasService.porVendendor(id).subscribe(vendas => this.vendas = vendas);
   }
 
   getIdVendedorRoute(): string {

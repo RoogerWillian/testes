@@ -38,8 +38,18 @@
         </div>
       </div>
       <!-- /.box-header -->
+
+      <hr style="margin-top: 0">
+
       <div class="box-body table-responsive no-padding">
-        <table class="table table-hover">
+
+        <div class="text-center" *ngIf="vendas && vendas.length === 0">
+          <b>
+            <p style="font-size: 13pt">Nenhuma venda encontrada para o vendedor filtrado!</p>
+          </b>
+        </div>
+
+        <table class="table table-hover" *ngIf="vendas && vendas.length > 0">
           <thead>
           <tr>
             <th>ID</th>
@@ -50,7 +60,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let venda of vendas | async">
+          <tr *ngFor="let venda of vendas">
             <td>{{venda.id}}</td>
             <td>{{venda.nome}} ({{venda.email}})</td>
             <td>{{venda.data | date:'dd/MM/yyyy HH:mm:ss'}}</td>

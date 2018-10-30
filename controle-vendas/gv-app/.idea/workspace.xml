@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e5175ba-e4b3-4e47-9f1a-985ba77964b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/shared/input/input.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/shared/input/input.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/bootstrap-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gv-api/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/../gv-api/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-cli.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vendas/venda.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/venda.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/vendas/vendas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/vendas.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/vendas/vendas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/vendas.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vendas/vendas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/vendas.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -126,54 +126,54 @@
     <session id="192900639">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TsLintLanguageService" value="7" />
-          <entry key="TypeScriptServerServiceImpl" value="7" />
+          <entry key="TsLintLanguageService" value="8" />
+          <entry key="TypeScriptServerServiceImpl" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="22" />
+          <entry key="html" value="32" />
           <entry key="js" value="2" />
-          <entry key="json" value="7" />
-          <entry key="ts" value="43" />
+          <entry key="json" value="9" />
+          <entry key="ts" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="22" />
-          <entry key="JSON" value="6" />
+          <entry key="HTML" value="32" />
+          <entry key="JSON" value="8" />
           <entry key="JavaScript" value="2" />
-          <entry key="TypeScript" value="43" />
+          <entry key="TypeScript" value="52" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="3084" />
-          <entry key="json" value="110" />
-          <entry key="ts" value="2756" />
+          <entry key="html" value="3302" />
+          <entry key="json" value="199" />
+          <entry key="ts" value="3158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3083" />
-          <entry key="JSON" value="110" />
+          <entry key="HTML" value="3301" />
+          <entry key="JSON" value="199" />
           <entry key="JavaScript" value="1" />
-          <entry key="TypeScript" value="2756" />
+          <entry key="TypeScript" value="3158" />
         </counts>
       </usages-collector>
     </session>
@@ -181,40 +181,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="289">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="408">
+              <caret line="47" column="88" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="88" />
+              <folding>
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -222,8 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="68" column="78" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="78" />
+            <state relative-caret-position="292">
+              <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -282,28 +264,28 @@
         <option value="$PROJECT_DIR$/src/app/restaurant-detail/restaurant-detail.component.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/header/header.component.html" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/header/header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/home/home.component.ts" />
         <option value="$PROJECT_DIR$/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/src/app/vendedores/vendedor.model.ts" />
         <option value="$PROJECT_DIR$/src/app/app.api.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts" />
         <option value="$PROJECT_DIR$/src/app/shared/input/input.component.ts" />
         <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts" />
-        <option value="$PROJECT_DIR$/angular-cli.json" />
-        <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html" />
-        <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html" />
         <option value="$PROJECT_DIR$/src/app/vendas/venda.model.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" />
-        <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.html" />
-        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.ts" />
         <option value="$PROJECT_DIR$/src/app/vendas/vendas.service.ts" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html" />
+        <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html" />
+        <option value="$PROJECT_DIR$/angular-cli.json" />
+        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" />
+        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.html" />
       </list>
     </option>
   </component>
@@ -337,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,10 +348,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file://C:/projetos-git/testes/controle-vendas/gv-app/src/app/home/home.component.html&#10;db&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/db.json&#10;app.mo&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/src/app/app.module.ts&#10;app&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/src/app/app.component.ts" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://C:/projetos-git/testes/controle-vendas/gv-app/src/index.html&#10;home&#9;FILE&#9;file://C:/projetos-git/testes/controle-vendas/gv-app/src/app/home/home.component.html&#10;db&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/db.json&#10;app.mo&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/src/app/app.module.ts&#10;app&#9;FILE&#9;file://C:/projetos-git/angular/meat-app-starter/src/app/app.component.ts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -384,6 +366,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projetos-git\testes\controle-vendas\gv-app\src\assets" />
       <recent name="C:\projetos-git\testes\controle-vendas\gv-app\src\app" />
     </key>
   </component>
@@ -440,7 +423,8 @@
       <workItem from="1540847415185" duration="415000" />
       <workItem from="1540847851144" duration="89000" />
       <workItem from="1540852101506" duration="25000" />
-      <workItem from="1540871781116" duration="15979000" />
+      <workItem from="1540871781116" duration="16874000" />
+      <workItem from="1540903550120" duration="8213000" />
     </task>
     <task id="LOCAL-00001" summary="Iniciando projeto">
       <created>1540676853106</created>
@@ -467,13 +451,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50001000" />
+    <option name="totallyTimeSpent" value="59109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19455007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19455007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -571,13 +554,6 @@
     <entry file="file://$PROJECT_DIR$/src/main.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/header/header.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -622,13 +598,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -637,22 +607,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedor.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bootbox/bootbox.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -664,16 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.css" />
     <entry file="file://$PROJECT_DIR$/src/app/shared/input/input.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -687,37 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#1;n#form#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="7" selection-start-line="28" selection-start-column="41" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/vendas/venda.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -725,13 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -745,10 +658,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="57" column="34" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedor.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="68" column="78" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="78" />
+        <state relative-caret-position="292">
+          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -758,22 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="408">
+          <caret line="47" column="88" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

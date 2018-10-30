@@ -43,13 +43,13 @@
 
       <div class="box-body table-responsive no-padding">
 
-        <div class="text-center" *ngIf="vendedores.empty">
+        <div class="text-center" *ngIf="vendedores && vendedores.length === 0">
           <b>
             <p style="font-size: 13pt">Nenhum(a) vendedor(a) encontrado(a)!</p>
           </b>
         </div>
 
-        <table class="table table-hover" *ngIf="!vendedores.empty">
+        <table class="table table-hover" *ngIf="vendedores && vendedores.length > 0">
           <thead>
           <tr>
             <th>ID</th>
@@ -60,7 +60,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let vendedor of vendedores | async">
+          <tr *ngFor="let vendedor of vendedores">
             <td>{{vendedor.id}}</td>
             <td>{{vendedor.nome}}</td>
             <td>{{vendedor.email}}</td>

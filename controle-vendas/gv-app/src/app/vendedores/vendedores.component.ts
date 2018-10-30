@@ -10,21 +10,21 @@ import {Observable} from 'rxjs';
 export class VendedoresComponent implements OnInit, AfterViewInit {
 
   @ViewChild('filtro', {read: ElementRef}) filtro: ElementRef;
-  vendedores: Observable<Vendedor[]>;
+  vendedores: Vendedor[];
 
   constructor(private vendedoresService: VendedoresService) {
   }
 
   ngOnInit() {
-    this.vendedores = this.vendedoresService.buscar('');
+    this.vendedoresService.buscar('').subscribe(vendedores => this.vendedores = vendedores);;
   }
 
   filtrarVendedores(filtro: string) {
-    this.vendedores = this.vendedoresService.buscar(filtro);
+    this.vendedoresService.buscar(filtro).subscribe(vendedores => this.vendedores = vendedores);
   }
 
   limparFiltros() {
-    this.vendedores = this.vendedoresService.buscar('');
+    this.vendedoresService.buscar('').subscribe(vendedores => this.vendedores = vendedores);;
     this.filtro.nativeElement.value = '';
     this.filtro.nativeElement.focus();
   }

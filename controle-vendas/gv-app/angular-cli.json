@@ -26,13 +26,14 @@
         "../node_modules/admin-lte/dist/css/AdminLTE.min.css",
         "../node_modules/admin-lte/dist/css/skins/skin-red.min.css",
         "../node_modules/admin-lte/plugins/iCheck/flat/red.css",
+        "assets/bootstrap-select.min.css",
         "styles.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
         "../node_modules/admin-lte/dist/js/app.min.js",
-        "../node_modules/bootbox/bootbox.js"
+        "assets/bootstrap-select.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
