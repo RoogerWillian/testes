@@ -16,15 +16,24 @@ export class VendedoresComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.vendedoresService.buscar('').subscribe(vendedores => this.vendedores = vendedores);;
+    this.vendedoresService.buscar('').subscribe(vendedores => {
+      this.vendedores = vendedores;
+      this.vendedoresService.atualizarStatusBusca(false);
+    });
   }
 
   filtrarVendedores(filtro: string) {
-    this.vendedoresService.buscar(filtro).subscribe(vendedores => this.vendedores = vendedores);
+    this.vendedoresService.buscar(filtro).subscribe(vendedores => {
+      this.vendedores = vendedores;
+      this.vendedoresService.atualizarStatusBusca(false);
+    });
   }
 
   limparFiltros() {
-    this.vendedoresService.buscar('').subscribe(vendedores => this.vendedores = vendedores);;
+    this.vendedoresService.buscar('').subscribe(vendedores => {
+      this.vendedores = vendedores;
+      this.vendedoresService.atualizarStatusBusca(false);
+    });
     this.filtro.nativeElement.value = '';
     this.filtro.nativeElement.focus();
   }
@@ -32,4 +41,9 @@ export class VendedoresComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.filtro.nativeElement.focus();
   }
+
+  isBuscandoVendedores(): boolean {
+    return this.vendedoresService.isBuscando();
+  }
+
 }

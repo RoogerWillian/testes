@@ -21,15 +21,25 @@ export class VendasComponent implements OnInit {
 
   ngOnInit() {
     this.vendasService.porVendendor(this.getIdVendedorRoute() !== undefined ? this.getIdVendedorRoute() : '')
-      .subscribe(vendas => this.vendas = vendas);
+      .subscribe(vendas => {
+        this.vendas = vendas;
+        this.vendasService.atualizarStatusBusca(false);
+      });
     this.vendedores = this.vendedoresService.buscar('');
   }
 
   onVendedorSelecionado(id: string) {
-    this.vendasService.porVendendor(id).subscribe(vendas => this.vendas = vendas);
+    this.vendasService.porVendendor(id).subscribe(vendas => {
+      this.vendas = vendas;
+      this.vendasService.atualizarStatusBusca(false);
+    });
   }
 
   getIdVendedorRoute(): string {
     return this.router.snapshot.queryParams['id'];
+  }
+
+  isBuscandoVendas(): boolean {
+    return this.vendasService.isBuscando();
   }
 }

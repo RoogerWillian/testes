@@ -43,6 +43,13 @@
 
       <div class="box-body table-responsive no-padding">
 
+        <div *ngIf="isBuscandoVendas()">
+          <p style="margin-left: 10px;font-size: 11pt">
+            <i class="fa fa-spin fa-refresh"></i>
+            <span> Aguarde! Buscando vendas...</span>
+          </p>
+        </div>
+
         <div class="text-center" *ngIf="vendas && vendas.length === 0">
           <b>
             <p style="font-size: 13pt">Nenhuma venda encontrada para o vendedor filtrado!</p>
