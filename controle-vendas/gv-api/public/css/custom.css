@@ -1,0 +1,125 @@
+.avi_conteudo {
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.avi_separador {
+    background-color: #cccccc;
+    height: 3px;
+    margin: 0 0 10px 0;
+}
+
+tr td.coluna_mes {
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    border-bottom: 2px solid #dddddd !important;
+}
+
+td[data-indice='12'], td[data-indice='0'] {
+    border-right: 2px solid #dddddd;
+}
+
+.cabecalho_relatorio {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #FAFBFD;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #a4a4a4;
+}
+
+.cabecalho_filtro {
+    text-align: left;
+    padding: 15px 10px;
+    background-color: #FAFBFD;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #a4a4a4;
+}
+
+.span_filtro {
+    font-size: 15px
+}
+
+.titulo{
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cabecalho_relatorio img {
+    position: absolute;
+}
+
+.borda_relatorio {
+    margin: 10px;
+    border: 1px solid #a4a4a4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.quebra_linha {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.bordaCinza {
+    border-color: #a4a4a4;
+}
+
+.cabecalho_relatorio_2 {
+    text-align: center;
+    padding: 15px;
+    background-color: #FAFBFD;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #DDDDDD;
+}
+
+.cabecalho_relatorio_2 .titulo {
+    font-size: 30px;
+    color: #1E94D2;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.cabecalho_relatorio_2 .logo {
+    margin-left: 5px;
+    float: left;
+    height: 20px;
+    width: 70px;
+}
+
+.footer_relatorio {
+    background-color: #FAFBFD;
+    border-radius: 5px;
+    border: 2px solid #DDDDDD;
+    padding: 10px 5px 10px 5px;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.footer_separador {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+table thead th {
+    padding: 10px;
+    background-color: #eeeeee;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
