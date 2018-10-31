@@ -10,6 +10,7 @@ class Vendedor extends Model
     protected $table = "vendedores";
     protected $fillable = ["nome", "email"];
     private static $colunas_retorno = ["id", "nome", "email", "comissao"];
+    private static $colunas_formatadas = ["vendedores.id AS vendedores_id", "vendedores.nome", "vendedores.email", "vendedores.comissao"];
 
     public static function buscar($filtro)
     {
@@ -23,4 +24,11 @@ class Vendedor extends Model
 
         return $vendedores;
     }
+
+    public static function vendedores_com_vendas()
+    {
+        return DB::table("vendedores")
+            ->get(self::$colunas_formatadas);
+    }
+
 }

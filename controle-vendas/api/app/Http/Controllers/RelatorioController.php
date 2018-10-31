@@ -15,7 +15,7 @@ class RelatorioController extends Controller
 
         try {
             if (isset($email) and !empty($email)) {
-                $retorno = Artisan::call("servico:email_vendas", [
+                $retorno = Artisan::call("service:email_vendas", [
                     "email" => $email
                 ]);
 

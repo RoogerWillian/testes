@@ -16,10 +16,11 @@ import {InputComponent} from './shared/input/input.component';
 import {NovaVendaComponent} from './vendas/nova-venda/nova-venda.component';
 import {UdpCurrencyMaskPipe} from './pipe/currency.pipe';
 import {CurrencyPipe} from '@angular/common';
-import { RelatoriosComponent } from './relatorios/relatorios.component';
+import {RelatoriosComponent} from './relatorios/relatorios.component';
 import {RelatorioService} from './relatorios/relatorio.service';
 import {SpacePipe} from './space.pipe';
-import { RelatorioLogsEnvioEmailComponent } from './relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component';
+import {RelatorioLogsEnvioEmailComponent} from './relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component';
+import {MessagesService} from './messages.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { RelatorioLogsEnvioEmailComponent } from './relatorios/relatorio-logs-en
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [VendedoresService, VendasService, CurrencyPipe, RelatorioService],
+  providers: [VendedoresService, VendasService, CurrencyPipe, RelatorioService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RelatorioService} from './relatorio.service';
 import {RelatorioLogEnvioEmail} from './relatorio-logs-envio-email/relatorio-logs-envio-email.model';
 import {Router} from '@angular/router';
+import {MessagesService} from '../messages.service';
 
 declare var $: any;
 
@@ -16,7 +17,8 @@ export class RelatoriosComponent implements OnInit {
   logsEnvioEmail: RelatorioLogEnvioEmail[];
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-  constructor(private formBuilder: FormBuilder, private relatorioService: RelatorioService) {
+  constructor(private formBuilder: FormBuilder, private relatorioService: RelatorioService,
+              private messageService: MessagesService) {
 
   }
 
@@ -40,6 +42,7 @@ export class RelatoriosComponent implements OnInit {
       helpBlock.addClass('hidden');
       campoEmail.val('');
       campoEmail.focus();
+      this.messageService.exibirMensagemSucesso('Relatório', 'E-mail enviado com sucesso!', 3000);
     });
   }
 

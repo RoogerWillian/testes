@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
 import {Venda} from '../venda.model';
 import {UdpCurrencyMaskPipe} from '../../pipe/currency.pipe';
 import {CurrencyPipe} from '@angular/common';
+import {MessagesService} from '../../messages.service';
 
 declare var $: any;
 
@@ -24,7 +25,8 @@ export class NovaVendaComponent implements OnInit {
 
   constructor(private router: Router, private formBuilder: FormBuilder,
               private vendasService: VendasService,
-              private vendedorService: VendedoresService) {
+              private vendedorService: VendedoresService,
+              private messageService: MessagesService) {
   }
 
   ngOnInit() {
@@ -45,8 +47,9 @@ export class NovaVendaComponent implements OnInit {
 
     $('#botaoLancarVenda').button('loading');
     this.vendasService.lancarVenda(venda).subscribe(() => {
-      this.router.navigate(['/vendas']);
       $('#botaoLancarVenda').button('reset');
+      this.router.navigate(['/vendas']);
+      this.messageService.exibirMensagemSucesso('Venda', 'Venda lançada com sucesso!', 3000);
     });
   }
 }

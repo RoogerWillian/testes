@@ -83,4 +83,37 @@ class Venda extends Model
             ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])
             ->sum('vendas.comissao');
     }
+
+    public static function vendas_do_dia_por_vendedor($id_vendedor)
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])->where("vendedores.id", $id_vendedor)
+            ->get(self::$colunas_retorno);
+    }
+
+    public static function somar_vendas_do_dia_por_vendedor($id_vendedor)
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])->where("vendedores.id", $id_vendedor)
+            ->sum('valor');
+    }
+
+    public static function somar_comissao_vendas_do_dia_por_vendedor($id_vendedor)
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])->where("vendedores.id", $id_vendedor)
+            ->sum('vendas.comissao');
+    }
 }

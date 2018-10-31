@@ -16,7 +16,7 @@ class EnvioEmailVendas extends Command
      *
      * @var string
      */
-    protected $signature = 'servico:email_vendas {email?}';
+    protected $signature = 'service:email_vendas {email?}';
 
     /**
      * The console command description.

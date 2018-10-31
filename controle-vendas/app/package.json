@@ -34,7 +34,8 @@
     "ts-helpers": "1.1.2",
     "web-animations-js": "2.2.5",
     "zone.js": "0.8.16",
-    "select2": "~4.0"
+    "select2": "~4.0",
+    "izitoast": "^1.4.0"
   },
   "devDependencies": {
     "@angular/cli": "1.2.7",

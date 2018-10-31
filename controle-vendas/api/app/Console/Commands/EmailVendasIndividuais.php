@@ -47,7 +47,7 @@ class EmailVendasIndividuais extends Command
         $vendedores_vendas = Vendedor::vendedores_com_vendas();
         $data_atual = Carbon::now()->format('d/m/Y');
         foreach ($vendedores_vendas as $vendedores) {
-            $id_vendedor = $vendedores->vendedor_id;
+            $id_vendedor = $vendedores->vendedores_id;
             $nome_vendedor = $vendedores->nome;
             $email_vendedor = $vendedores->email;
             $vendas_do_dia = Venda::vendas_do_dia_por_vendedor($id_vendedor);
@@ -64,12 +64,12 @@ class EmailVendasIndividuais extends Command
 
                 $mensagem_log = "Relatório enviado para {$email_vendedor} em " . $data_atual . " às " . Carbon::now()->format('H:i:s');
                 LogEnvioEmail::create([
-                    "tipo" => 'RELATORIO_GERAL',
+                    "tipo" => 'RELATORIO_VENDEDOR',
                     "descricao" => $mensagem_log
                 ]);
             } else {
                 if (count($vendas_do_dia) == 0)
-                    $this->error("Sem vendas para enviar em " . $data_atual);
+                    $this->line("Sem vendas para enviar em " . $data_atual . ' - ' . $nome_vendedor);
                 else if (isset($email_para_enviar) or empty($email_para_enviar))
                     $this->error("E-mail não informado");
             }

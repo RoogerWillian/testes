@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {Vendedor} from '../vendedor.model';
 import {VendedoresService} from '../vendedores.service';
 import {DOCUMENT} from '@angular/common';
+import {MessagesService} from '../../messages.service';
 
 declare var $: any;
 
@@ -17,7 +18,8 @@ export class NovoVendedorComponent implements OnInit, AfterViewInit {
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   constructor(private router: Router, private formBuilder: FormBuilder,
-              private vendedorService: VendedoresService) {
+              private vendedorService: VendedoresService,
+              private messageService: MessagesService) {
   }
 
   ngOnInit() {
@@ -32,6 +34,7 @@ export class NovoVendedorComponent implements OnInit, AfterViewInit {
     this.vendedorService.salvar(vendedor).subscribe(() => {
       $('#botaoSalvarVendedor').button('reset');
       this.router.navigate(['/vendedores']);
+      this.messageService.exibirMensagemSucesso('Vendedor', 'Vendedor salvo com sucesso!', 3000);
     });
   }
 
