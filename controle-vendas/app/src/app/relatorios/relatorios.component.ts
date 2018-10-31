@@ -42,6 +42,7 @@ export class RelatoriosComponent implements OnInit {
       helpBlock.addClass('hidden');
       campoEmail.val('');
       campoEmail.focus();
+      this.recuperarLogs();
       this.messageService.exibirMensagemSucesso('Relatório', 'E-mail enviado com sucesso!', 3000);
     });
   }
