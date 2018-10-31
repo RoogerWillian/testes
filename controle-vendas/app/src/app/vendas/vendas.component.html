@@ -68,8 +68,8 @@
             <td>{{venda.id}}</td>
             <td>{{venda.nome}} ({{venda.email}})</td>
             <td>{{venda.data | date:'dd/MM/yyyy HH:mm:ss'}}</td>
-            <td>{{venda.comissao_venda | currency: 'BRL':true}}</td>
-            <td class="text-right">{{venda.valor | currency: 'BRL':true}}</td>
+            <td>{{venda.comissao_venda | currency: 'BRL':true | space}}</td>
+            <td class="text-right">{{venda.valor | currency: 'BRL':true | space}}</td>
           </tr>
           </tbody>
         </table>

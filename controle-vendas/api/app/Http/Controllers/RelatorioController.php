@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\LogEnvioEmail;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Artisan;
 
 class RelatorioController extends Controller
@@ -23,5 +25,10 @@ class RelatorioController extends Controller
             $retorno = $exception->getMessage();
             return response()->json($retorno);
         }
+    }
+
+    public function listar()
+    {
+        return response()->json(LogEnvioEmail::all(), Response::HTTP_CREATED);
     }
 }

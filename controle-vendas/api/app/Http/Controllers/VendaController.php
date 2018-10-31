@@ -50,8 +50,7 @@ class VendaController extends Controller
                     $venda_retorno->data_da_venda = date('d/m/Y H:i:s', strtotime($venda->created_at));
                     $venda_retorno->comissao_venda = $this->formatar_moeda($venda->comissao);
 
-                    return response()->json([
-                        "message" => "Venda lancada com sucesso", "data" => $venda_retorno], Response::HTTP_CREATED);
+                    return response()->json($venda_retorno, Response::HTTP_CREATED);
                 } else {
                     return response()->json(["message" => "Erro ao lançar venda"], Response::HTTP_BAD_REQUEST);
                 }

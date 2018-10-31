@@ -60,8 +60,7 @@ class VendedorController extends Controller
                     $dados_retorno->id = $vendedor->id;
                     $dados_retorno->nome = $vendedor->nome;
                     $dados_retorno->email = $vendedor->email;
-                    return response()->json([
-                        "message" => "Vendedor salvo com sucesso", "data" => $dados_retorno], Response::HTTP_CREATED);
+                    return response()->json($dados_retorno, Response::HTTP_CREATED);
                 } else
                     return response()->json(["message" => "Erro ao criar vendedor"], Response::HTTP_BAD_REQUEST);
             } else {
@@ -70,40 +69,5 @@ class VendedorController extends Controller
         } catch (\Exception $exception) {
             return response()->json(["message" => $exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-    }
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

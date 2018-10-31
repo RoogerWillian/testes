@@ -72,7 +72,7 @@
             <td>{{vendedor.id}}</td>
             <td>{{vendedor.nome}}</td>
             <td>{{vendedor.email}}</td>
-            <td>{{vendedor.comissao | currency: 'BRL':true}}</td>
+            <td>{{vendedor.comissao | currency: 'BRL':true | space}}</td>
             <td class="text-right">
               <a [routerLink]="['/vendas/']" [queryParams]="{id: vendedor.id}" class="btn btn-default btn-xs">
                 <i class="fa fa-external-link"></i>

@@ -1,0 +1,37 @@
+<section class="invoice" *ngIf="logs?.length > 0">
+  <div class="row">
+
+    <div class="col-xs-12">
+      <h2 class="page-header">
+        <i class="fa fa-calendar"></i>
+        <span>Históricos de envio de relatórios por e-mail</span>
+        <small>relatório de venda diário geral e por vendedor</small>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row invoice-info">
+    <div class="col-xs-12 table-responsive no-padding">
+      <table class="table">
+        <thead>
+        <tr>
+          <th width="11%">Relatório</th>
+          <th>Histório</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let log of logs">
+          <td>
+            <span *ngIf="log.tipo === 'RELATORIO_GERAL'" class="label label-success"
+                  style="font-size: 9.5pt;font-weight: 400">Vendas diárias geral</span>
+            <span *ngIf="log.tipo === 'RELATORIO_VENDEDOR'" class="label label-primary"
+                  style="font-size: 9.5pt;font-weight: 400">Vendas diárias por vendedor</span>
+          </td>
+          <td>{{log.descricao}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

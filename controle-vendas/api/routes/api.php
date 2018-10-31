@@ -25,4 +25,5 @@ Route::prefix("vendas")->group(function () {
 // Relatorio Controller
 Route::prefix("relatorios")->group(function () {
     Route::post("vendas_diarias", "RelatorioController@enviarEmailVendasDiarios")->name("relatorios.diarios");
+    Route::get("logs", "RelatorioController@listar")->name("relatorios.logs");
 });

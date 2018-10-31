@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5175ba-e4b3-4e47-9f1a-985ba77964b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../api/app/Http/Controllers/RelatorioController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/space.pipe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/public/reports/Vendas_Diarias_2018_10_30.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../api/public/reports/Vendas_Diarias_2018_10_30.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/app/Http/Controllers/RelatorioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../api/app/Http/Controllers/RelatorioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/app/Http/Controllers/VendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../api/app/Http/Controllers/VendaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/public/reports/Vendas_Diarias_2018_10_31.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../api/public/reports/Vendas_Diarias_2018_10_31.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../api/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vendas/vendas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendas/vendas.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -187,26 +191,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="6" />
-          <entry key="ts" value="6" />
+          <entry key="html" value="11" />
+          <entry key="ts" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
-          <entry key="TypeScript" value="6" />
+          <entry key="HTML" value="11" />
+          <entry key="TypeScript" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="564" />
-          <entry key="ts" value="435" />
+          <entry key="html" value="1054" />
+          <entry key="ts" value="1183" />
+          <entry key="txt" value="100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="564" />
-          <entry key="TypeScript" value="435" />
+          <entry key="HTML" value="1054" />
+          <entry key="PLAIN_TEXT" value="100" />
+          <entry key="TypeScript" value="1183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -220,10 +226,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+            <state relative-caret-position="556">
+              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -232,31 +260,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="41" column="80" lean-forward="true" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="30" column="97" selection-start-line="30" selection-start-column="97" selection-end-line="30" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+            <state relative-caret-position="289">
+              <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -265,28 +272,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="34" column="7" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="42">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html">
+        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="41" column="72" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="478">
+              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -304,6 +310,7 @@
     <findStrings>
       <find>Meat Angular Application</find>
       <find>meat-app-starter</find>
+      <find>this.router.navigate</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -318,8 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/styles.css" />
-        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/src/app/about/about.component.ts" />
         <option value="$PROJECT_DIR$/src/app/about/about.component.html" />
         <option value="$PROJECT_DIR$/src/app/restaurants/restaurant/restaurant.model.ts" />
@@ -350,23 +355,27 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/vendas/vendas.service.ts" />
         <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" />
         <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts" />
         <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html" />
         <option value="$PROJECT_DIR$/src/app/pipe/currency.pipe.ts" />
         <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.html" />
         <option value="$PROJECT_DIR$/src/app/vendas/nova-venda/nova-venda.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.html" />
         <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.ts" />
         <option value="$PROJECT_DIR$/angular-cli.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/space.pipe.ts" />
+        <option value="$PROJECT_DIR$/src/app/vendas/vendas.component.html" />
+        <option value="$PROJECT_DIR$/src/app/vendedores/vendedores.component.html" />
+        <option value="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.ts" />
         <option value="$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts" />
         <option value="$PROJECT_DIR$/src/app/relatorios/relatorios.component.html" />
+        <option value="$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts" />
       </list>
     </option>
   </component>
@@ -411,6 +420,12 @@
               <item name="app" type="b2602c69:ProjectViewProjectNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -498,7 +513,7 @@
       <workItem from="1540871781116" duration="16874000" />
       <workItem from="1540903550120" duration="22592000" />
       <workItem from="1540931410297" duration="2094000" />
-      <workItem from="1540948330678" duration="4865000" />
+      <workItem from="1540948330678" duration="11297000" />
     </task>
     <task id="LOCAL-00001" summary="Iniciando projeto">
       <created>1540676853106</created>
@@ -556,16 +571,24 @@
       <option name="project" value="LOCAL" />
       <updated>1540931473053</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Integrando API e APP e enviando e-mail com o relatorio de vendas diarias">
+      <created>1540953283902</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1540953283902</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80447000" />
+    <option name="totallyTimeSpent" value="86879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.191875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -625,13 +648,10 @@
     <MESSAGE value="Loading nas listagens" />
     <MESSAGE value="Tratativas valores monetários" />
     <MESSAGE value="Venda - Melhorando filtro de vendedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Venda - Melhorando filtro de vendedor" />
+    <MESSAGE value="Integrando API e APP e enviando e-mail com o relatorio de vendas diarias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrando API e APP e enviando e-mail com o relatorio de vendas diarias" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/restaurant-detail/menu/menu.component.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/restaurant-detail/menu-item/menu-item.component.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/restaurant-detail/shopping-cart/shopping-cart.component.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/restaurants/restaurants.component.html" />
     <entry file="file://$PROJECT_DIR$/src/app/restaurant-detail/shopping-cart/shopping-cart.component.html" />
     <entry file="file://$PROJECT_DIR$/src/app/restaurants/restaurant/restaurant.component.html" />
     <entry file="file://$PROJECT_DIR$/src/app/restaurant-detail/menu-item/menu-item.component.html" />
@@ -711,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/venda.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -736,13 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -794,41 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="89" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/vendedores/novo-vendedor/novo-vendedor.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="41" column="72" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,40 +828,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/vendas.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/space.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendas/venda.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="289">
+          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="80" lean-forward="true" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        <state relative-caret-position="238">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/vendedores/vendedores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="97" selection-start-line="30" selection-start-column="97" selection-end-line="30" selection-end-column="97" />
+        <state relative-caret-position="257">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/relatorios/relatorios.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

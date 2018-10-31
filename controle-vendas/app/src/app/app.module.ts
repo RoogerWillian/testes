@@ -18,6 +18,8 @@ import {UdpCurrencyMaskPipe} from './pipe/currency.pipe';
 import {CurrencyPipe} from '@angular/common';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import {RelatorioService} from './relatorios/relatorio.service';
+import {SpacePipe} from './space.pipe';
+import { RelatorioLogsEnvioEmailComponent } from './relatorios/relatorio-logs-envio-email/relatorio-logs-envio-email.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {RelatorioService} from './relatorios/relatorio.service';
     InputComponent,
     NovaVendaComponent,
     UdpCurrencyMaskPipe,
-    RelatoriosComponent
+    RelatoriosComponent,
+    SpacePipe,
+    RelatorioLogsEnvioEmailComponent
   ],
   imports: [
     BrowserModule,
