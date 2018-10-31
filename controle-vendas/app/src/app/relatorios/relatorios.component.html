@@ -1,0 +1,45 @@
+<!--<section class="content">-->
+<section class="invoice">
+
+  <form [formGroup]="relatorioForm" novalidate>
+    <div class="row">
+
+      <div class="col-xs-12">
+        <ol class="breadcrumb">
+          <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+          <li class="active">Relatórios</li>
+        </ol>
+      </div>
+
+      <div class="col-xs-12">
+        <h2 class="page-header">
+          <i class="fa fa-file-pdf-o"></i> <span>Relação de vendas diárias</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row invoice-info">
+      <div class="col-xs-12">
+        <gv-input-container errorMessage="E-mail inválido" label="Nome">
+          <label for="email" class="control-label">Insira seu e-mail abaixo para recebe-lo</label>
+          <div class="input-group">
+            <input #email id="email" class="form-control" formControlName="email" placeholder="Seu e-mail"
+                   autocomplete="off">
+            <span class="input-group-btn">
+                <button id="botaoEnviarEmail" class="btn btn-primary" type="button" [disabled]="relatorioForm.invalid"
+                        (click)="enviarEmailVendasDiarias(relatorioForm.value)"
+                        data-loading-text="<i class='fa fa-spinner fa-spin '></i> Enviando e-mail...">
+                    <i class="fa fa-send"></i>
+                    <span>Enviar e-mail</span>
+                </button>
+            </span>
+          </div><!-- /input-group -->
+        </gv-input-container>
+      </div>
+    </div>
+
+  </form>
+
+</section>
+
+

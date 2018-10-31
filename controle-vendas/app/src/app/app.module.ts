@@ -16,6 +16,8 @@ import {InputComponent} from './shared/input/input.component';
 import {NovaVendaComponent} from './vendas/nova-venda/nova-venda.component';
 import {UdpCurrencyMaskPipe} from './pipe/currency.pipe';
 import {CurrencyPipe} from '@angular/common';
+import { RelatoriosComponent } from './relatorios/relatorios.component';
+import {RelatorioService} from './relatorios/relatorio.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {CurrencyPipe} from '@angular/common';
     NovoVendedorComponent,
     InputComponent,
     NovaVendaComponent,
-    UdpCurrencyMaskPipe
+    UdpCurrencyMaskPipe,
+    RelatoriosComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import {CurrencyPipe} from '@angular/common';
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [VendedoresService, VendasService, CurrencyPipe],
+  providers: [VendedoresService, VendasService, CurrencyPipe, RelatorioService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

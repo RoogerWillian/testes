@@ -14,13 +14,10 @@ declare var $: any;
 export class NovoVendedorComponent implements OnInit, AfterViewInit {
 
   vendedorForm: FormGroup;
-  botaoSalvar: any;
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   constructor(private router: Router, private formBuilder: FormBuilder,
-              private vendedorService: VendedoresService,
-              @Inject(DOCUMENT) document) {
-    this.botaoSalvar = document.getElementById('botaoSalvarVendedor');
+              private vendedorService: VendedoresService) {
   }
 
   ngOnInit() {
