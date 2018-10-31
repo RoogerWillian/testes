@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\LogEnvioEmail;
-use App\Mail\TemplateEmail;
+use App\Mail\TemplateEmailVendasDiarias;
 use App\Venda;
 use App\Vendedor;
 use Carbon\Carbon;
@@ -60,7 +60,7 @@ class EmailVendasIndividuais extends Command
                     'assunto' => "Gestão de Vendas | Relação diária ({$data_atual}) - {$nome_vendedor}",
                     'relatorio' => $caminho_relatorio
                 ];
-                Mail::to($mail['email'])->send(new TemplateEmail($mail));
+                Mail::to($mail['email'])->send(new TemplateEmailVendasDiarias($mail));
 
                 $mensagem_log = "Relatório enviado para {$email_vendedor} em " . $data_atual . " às " . Carbon::now()->format('H:i:s');
                 LogEnvioEmail::create([

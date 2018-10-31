@@ -1,3 +1,7 @@
 /.idea
 /controle-vendas/.idea/
-/controle-vendas/gv-app/node_modules/
+/controle-vendas/app/node_modules/
+/controle-vendas/app/.idea/
+/controle-vendas/api/node_modules/
+/controle-vendas/api/.idea/
+/controle-vendas/api/public/reports/

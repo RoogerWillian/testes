@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class TemplateEmail extends Mailable
+class TemplateEmailVendasDiarias extends Mailable
 {
     use Queueable, SerializesModels;
     public $email;
@@ -32,6 +32,6 @@ class TemplateEmail extends Mailable
         return
             $this->view('email.EmailRelatorio')
                 ->attach($this->email['relatorio'])
-                ->subject("Gestão de vendas - " . $this->email['nome_vendedor']);
+                ->subject($this->email['assunto']);
     }
 }
