@@ -33,18 +33,23 @@ export class RelatoriosComponent implements OnInit {
   }
 
   enviarEmailVendasDiarias(email: string) {
-    let campoEmail = $('#email');
-    let helpBlock = $('.help-block');
-    $('#botaoEnviarEmail').button('loading');
-    this.relatorioService.vendasDiarias(email).subscribe(() => {
-      $('#botaoEnviarEmail').button('reset');
-      campoEmail.parent().parent().removeClass('has-success');
-      helpBlock.addClass('hidden');
-      campoEmail.val('');
-      campoEmail.focus();
-      this.recuperarLogs();
-      this.messageService.exibirMensagemSucesso('Relatório', 'E-mail enviado com sucesso!', 3000);
-    });
+    if (email) {
+      let campoEmail = $('#email');
+      let helpBlock = $('.help-block');
+      let botaoEnviar = $('#botaoEnviarEmail');
+      botaoEnviar.button('loading');
+      this.relatorioService.vendasDiarias(email).subscribe(() => {
+        botaoEnviar.button('reset');
+        campoEmail.parent().parent().removeClass('has-success');
+        helpBlock.addClass('hidden');
+        campoEmail.val('');
+        campoEmail.focus();
+        this.recuperarLogs();
+        this.messageService.exibirMensagemSucesso('Relatório', 'E-mail enviado com sucesso!', 3000);
+      });
+    } else {
+      alert('aaa');
+    }
   }
 
   recuperarLogs() {
