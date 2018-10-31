@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\LogEnvioEmail;
 use App\Mail\TemplateEmail;
 use App\Venda;
 use Carbon\Carbon;
@@ -56,6 +57,12 @@ class EnvioEmailVendas extends Command
             $mail['assunto'] = "Gestão de Vendas | Relação diária ({$data_atual})";
             $mail['relatorio'] = $caminho_relatorio;
             Mail::to($mail['email'])->send(new TemplateEmail($mail));
+
+            $mensagem_log = "Relatório enviado para {$email_para_enviar} em " . $data_atual . " às " . Carbon::now()->format('H:i:s');
+            LogEnvioEmail::create([
+                "tipo" => 'RELATORIO_GERAL',
+                "descricao" => $mensagem_log
+            ]);
         } else {
             if ($otal_vendas == 0)
                 $this->error("Sem vendas para enviar em " . $data_atual);

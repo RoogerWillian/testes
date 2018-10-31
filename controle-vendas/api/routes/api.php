@@ -21,3 +21,8 @@ Route::prefix("vendas")->group(function () {
     Route::post("lancar", "VendaController@lancar")->name("vendas.lancar");
     Route::get("por_vendedor/{id?}", "VendaController@por_vendedor")->name("vendas.por_vendedor");
 });
+
+// Relatorio Controller
+Route::prefix("relatorios")->group(function () {
+    Route::post("vendas_diarias", "RelatorioController@enviarEmailVendasDiarios")->name("relatorios.diarios");
+});
