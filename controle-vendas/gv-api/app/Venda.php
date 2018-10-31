@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Observers\VendaObserver;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
@@ -45,5 +46,41 @@ class Venda extends Model
         }
 
         return $vendas;
+    }
+
+    public static function vendas_do_dia()
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])
+            ->get(self::$colunas_retorno);
+    }
+
+    public static function somar_vendas_do_dia()
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])
+            ->sum('valor');
+    }
+
+    public static function somar_comissao_vendas_do_dia()
+    {
+        $hoje = Carbon::now()->format('Y-m-d');
+        $dt_inicial = $hoje . " 00:00:00";
+        $dt_final = $hoje . " 23:59:59";
+
+        return \DB::table("vendas")
+            ->join("vendedores", "vendas.vendedor_id", "vendedores.id")
+            ->whereBetween("vendas.created_at", [$dt_inicial, $dt_final])
+            ->sum('vendas.comissao');
     }
 }

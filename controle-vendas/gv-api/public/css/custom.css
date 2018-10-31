@@ -123,3 +123,26 @@ table tbody td {
     padding: 10px;
     border-bottom: 1px solid #DDDDDD;
 }
+
+#main {
+    margin: auto;
+    width: 400px;
+}
+
+#sidebar    {
+    width: 50%;
+    min-height: 400px;
+    float: left;
+}
+
+#page-wrap  {
+    width: 50%;
+    min-height: 400px;
+    float: left;
+}
+
+.clear:after {
+    clear: both;
+    display: table;
+    content: "";
+}
